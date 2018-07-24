@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Ecommerce;
 
 use App\Car;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,9 +18,10 @@ class CarController extends Controller
 
         $products = $car->products()->get();
         $total = $car->total();
-
+        $categories = Category::all();
         return view('ecommerce.car.index')
             ->with('products', $products)
-            ->with('total', $total);
+            ->with('total', $total)
+            ->with('categories', $categories);
     }
 }
