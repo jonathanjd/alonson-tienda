@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Car;
 use App\Category;
+use Illuminate\Http\Request;
 
 class TiendaController extends Controller
 {
@@ -12,6 +13,7 @@ class TiendaController extends Controller
     {
         # code...
         $categories = Category::all();
-        return view('ecommerce.tienda')->with('categories', $categories);
+        return view('ecommerce.tienda')
+            ->with('categories', $categories);
     }
 }

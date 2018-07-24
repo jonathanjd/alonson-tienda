@@ -17,23 +17,21 @@
           HOME
         </a>
         @foreach ($categories as $category)
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="{{ route('categories.show', $category) }}">
           {{ $category->title }}
         </a>
         @endforeach
-
-
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
-              <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
+            <a class="button is-primary" href="{{ route('carrito') }}">
                 <span class="icon">
                   <i class="fas fa-shopping-cart"></i>
                 </span>
-                <span>CART</span>
+                <span>MI CARRITO {{ $productCount }}</span>
               </a>
             </p>
           </div>

@@ -21,4 +21,5 @@ class Image extends Model
         # code...
         return $this->morphTo();
     }
+
 }

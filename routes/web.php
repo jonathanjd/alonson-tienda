@@ -20,7 +20,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'tienda'], function () {
     Route::get('/', 'TiendaController@index')->name('tienda');
+    Route::get('carrito', 'Ecommerce\CarController@index')->name('carrito');
     Route::resource('products', 'ProductController');
     Route::resource('categories', 'Ecommerce\CategoryController');
+    Route::resource('in_cars', 'Ecommerce\InCarController', ['only' => ['store', 'destroy']]);
 });
 

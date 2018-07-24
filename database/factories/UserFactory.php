@@ -37,3 +37,12 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'category_id' => $faker->numberBetween(1, 6),
     ];
 });
+
+$factory->define(App\Image::class, function (Faker $faker) {
+    return [
+        'name' => 'product.jpeg',
+        'alt' => 'product',
+        'path' => asset('img/product.jpeg'),
+        'morphic_type' => 'product',
+    ];
+});
