@@ -12,10 +12,10 @@ Relation::morphMap([
 
 class Image extends Model
 {
+    protected $connection = 'mysql_ecommerce';
 
-    protected $fillable = ['name', 'alt', 'path', 'morphic_type', 'morphic_id'];
+    protected $fillable = ['name', 'alt', 'path'];
 
-    //
     public function morphic()
     {
         # code...

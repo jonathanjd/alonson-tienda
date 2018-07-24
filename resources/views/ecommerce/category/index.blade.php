@@ -19,7 +19,18 @@
     <div class="columns is-multiline">
       @foreach ($categories as $category)
         <div class="column is-4">
-          {{ $category->title }}
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="{{ $category->image->path }}" alt="{{ $category->image->alt }}">
+              </figure>
+            </div>
+            <div class="card-content has-background-primary">
+            <div class="content media">
+              <a href="{{ route('categories.show', $category->slug) }}" class="has-text-white text-center media-content is-size-3">{{ $category->title }}</a>
+            </div>
+          </div>
+          </div>
         </div>
       @endforeach
     </div>

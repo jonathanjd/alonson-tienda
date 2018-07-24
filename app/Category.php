@@ -11,6 +11,11 @@ class Category extends Model
 
     protected $fillable = ['title', 'slug', 'seo_title', 'seo_keywords', 'seo_description'];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function image()
     {
         # code...
