@@ -1,0 +1,56 @@
+[25-07-2018 10:26:37] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:26:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:26:39] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-07-2018 10:26:40] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[25-07-2018 10:53:06] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:53:07] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:53:07] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-07-2018 10:53:08] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[25-07-2018 10:56:58] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:56:59] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:56:59] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ
+[25-07-2018 10:57:00] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:58:26] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:58:27] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:58:27] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ
+[25-07-2018 10:58:27] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:58:34] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:58:35] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:58:35] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ
+[25-07-2018 10:58:36] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:58:36] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ/execute
+[25-07-2018 10:58:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:19] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:59:20] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:20] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ
+[25-07-2018 10:59:21] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:21] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ/execute
+[25-07-2018 10:59:22] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[25-07-2018 10:59:22] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment/PAY-9LF48960F10101007LNMP6UQ/execute. {"name":"PAYMENT_ALREADY_DONE","message":"Payment has been done already for this cart.","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"ac4bdf438d95b"}
+[25-07-2018 10:59:37] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:59:38] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-07-2018 10:59:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[25-07-2018 10:59:52] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 10:59:53] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:53] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-8F372989JJ097972VLNMQBWI
+[25-07-2018 10:59:54] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 10:59:54] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAY-8F372989JJ097972VLNMQBWI/execute
+[25-07-2018 10:59:57] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:03:31] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 11:03:34] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:03:34] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-07-2018 11:03:35] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[25-07-2018 11:03:50] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 11:03:51] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:03:51] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-8NX53840S3688042BLNMQDRI
+[25-07-2018 11:03:52] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:03:52] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAY-8NX53840S3688042BLNMQDRI/execute
+[25-07-2018 11:03:55] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:05:38] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-07-2018 11:05:39] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:05:39] PayPal\Core\PayPalHttpConnection : INFO: GET https://api.sandbox.paypal.com/v1/payments/payment/PAY-8NX53840S3688042BLNMQDRI
+[25-07-2018 11:05:40] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[25-07-2018 11:05:40] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAY-8NX53840S3688042BLNMQDRI/execute
+[25-07-2018 11:05:41] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[25-07-2018 11:05:41] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment/PAY-8NX53840S3688042BLNMQDRI/execute. {"name":"PAYMENT_ALREADY_DONE","message":"Payment has been done already for this cart.","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"c0c3fef2e19fd"}

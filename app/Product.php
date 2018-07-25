@@ -27,4 +27,15 @@ class Product extends Model
         # code...
         return $this->belongsTo(Category::class);
     }
+
+    public function paypalItem()
+    {
+        # code...
+        return \PaypalPayment::item()
+            ->setName($this->title)
+            ->setDescription($this->description)
+            ->setCurrency('USD')
+            ->setQuantity(1)
+            ->setPrice($this->pricing);
+    }
 }
