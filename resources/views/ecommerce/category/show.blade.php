@@ -36,7 +36,7 @@
               </p>
               <div class="columns">
                 <div class="column">
-                  <a href="#" class="button is-info is-fullwidth">Detalles</a>
+                  <a href="{{ route('products.show', $product) }}" class="button is-info is-fullwidth">Detalles</a>
                 </div>
                 <div class="column">
                   @include('ecommerce.include.form', ['product', $product])

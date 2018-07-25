@@ -28,7 +28,7 @@ class InCarController extends Controller
 
         if ($response) {
             # code...
-            return redirect()->back();
+            return redirect()->route('carrito');
         } else {
             # code...
             return redirect()->back();

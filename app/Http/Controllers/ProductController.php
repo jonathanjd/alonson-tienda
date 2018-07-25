@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -40,12 +42,17 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
+        $product = Product::where('slug', $slug)->first();
+        $categories = Category::all();
+        return view('ecommerce.product.show')
+            ->with('product', $product)
+            ->with('categories', $categories);
     }
 
     /**
