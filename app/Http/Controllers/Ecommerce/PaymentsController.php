@@ -19,4 +19,16 @@ class PaymentsController extends Controller
         $paypal = new Paypal($car);
         $paypal->execute($request->paymentId, $request->PayerID);
     }
+
+    public function send()
+    {
+        # code...
+        $car_id = \Session::get('car_id');
+        $car = Car::findOrCreateBySessionID($car_id);
+
+        $paypal = new Paypal($car);
+        $payment = $paypal->generate();
+
+        return redirect($payment->getApprovalLink());
+    }
 }

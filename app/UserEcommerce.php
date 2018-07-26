@@ -10,6 +10,8 @@ class UserEcommerce extends Authenticatable
     //
     use Notifiable;
 
+    protected $guard = 'user-ecommerce';
+
     protected $connection = 'mysql_ecommerce';
 
     protected $table = 'users';
