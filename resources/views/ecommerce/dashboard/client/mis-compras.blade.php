@@ -25,33 +25,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#0001</td>
-                        <td>02-12-2018</td>
-                        <td>Creado</td>
-                        <td>$100.00</td>
-                        <td>
-                            <a href="{{ route('compra', 1) }}" class="button is-primary">Ver</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>#0001</td>
-                        <td>02-12-2018</td>
-                        <td>Creado</td>
-                        <td>$100.00</td>
-                        <td>
-                            <a href="{{ route('compra', 1) }}" class="button is-primary">Ver</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>#0001</td>
-                        <td>02-12-2018</td>
-                        <td>Creado</td>
-                        <td>$100.00</td>
-                        <td>
-                            <a href="{{ route('compra', 1) }}" class="button is-primary">Ver</a>
-                        </td>
-                    </tr>
+                    @foreach ($orders as $order)
+                        <tr>
+                            <td>#00{{ $order->id }}</td>
+                            <td>{{ date("d/m/Y", strtotime($order->created_at)) }}</td>
+                            <td>{{ strtoupper($order->status) }}</td>
+                            <td>${{ $order->total }}</td>
+                            <td>
+                                <a href="{{ route('compra', $order->car->customid) }}" class="button is-primary">Ver Recibo</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

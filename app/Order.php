@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -11,6 +12,7 @@ class Order extends Model
 
     protected $fillable = [
         'car_id',
+        'user_id',
         'line1',
         'line2',
         'city',
@@ -45,6 +47,7 @@ class Order extends Model
         $orderData['email'] = $payer->payer_info->email;
         $orderData['total'] = $car->total();
         $orderData['car_id'] = $car->id;
+        $orderData['user_id'] = Auth::guard('user-ecommerce')->user()->id;
         return Order::create($orderData);
     }
 }

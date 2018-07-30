@@ -7,6 +7,7 @@ use App\Order;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class DashBoardController extends Controller
 {
@@ -30,8 +31,12 @@ class DashBoardController extends Controller
     {
         # code...
         $categories = Category::all();
+        $orders = Order::where('user_id', Auth::guard('user-ecommerce')->user()->id)
+            ->orderBy('id', 'desc')
+            ->get();
         return view('ecommerce.dashboard.client.mis-compras')
-            ->with('categories', $categories);
+            ->with('categories', $categories)
+            ->with('orders', $orders);
     }
 
     public function compra($customid)
