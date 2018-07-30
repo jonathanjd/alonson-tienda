@@ -55,7 +55,7 @@
           </tbody>
         </table>
         <p class="subtitle"><strong>SubTotal: ${{ $total }}</strong></p>
-        <a href="#" class="button is-large is-info is-fullwidth"><i class="fab fa-cc-paypal fa-2x"></i></a>
+        <a href="{{ route('payment.send') }}" class="button is-large is-info is-fullwidth"><i class="fab fa-cc-paypal fa-2x"></i></a>
       </div>
     </div>
   </div>

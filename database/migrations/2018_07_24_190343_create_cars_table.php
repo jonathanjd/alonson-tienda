@@ -15,6 +15,7 @@ class CreateCarsTable extends Migration
     {
         Schema::connection('mysql_ecommerce')->create('cars', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('customid')->unique()->nullable();
             $table->string('status');
             $table->timestamps();
         });

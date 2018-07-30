@@ -12,6 +12,7 @@ class TiendaController extends Controller
     public function index()
     {
         # code...
+        //\Session::flush();
         $categories = Category::all();
         return view('ecommerce.tienda')
             ->with('categories', $categories);

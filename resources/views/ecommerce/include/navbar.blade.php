@@ -52,11 +52,11 @@
                         </div>
                     @else
                         <div class="navbar-dropdown is-boxed">
-                            <a class="navbar-item" href="{{ route('login') }}">
+                            <a class="navbar-item" href="{{ route('dashboard') }}">
                                 Dashboard
                             </a>
                             <hr class="navbar-divider">
-                            <a class="navbar-item" href="{{ route('register') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <a class="navbar-item" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 Logout
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

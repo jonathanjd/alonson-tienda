@@ -25,4 +25,25 @@ class LoginController extends Controller
 
         return redirect()->route('login');
     }
+    public function login(Request $request)
+    {
+        # code...
+        $this->validate($request, [
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
+
+        if (auth()->guard('user-ecommerce')->attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->route('tienda');
+        } else {
+            \Session::flash('errorAuth', 'Incorrecto email o password.');
+            return redirect()->back();
+        }
+    }
 }

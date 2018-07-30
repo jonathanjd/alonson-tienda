@@ -13,7 +13,7 @@ class CreateInCarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('in_cars', function (Blueprint $table) {
+        Schema::connection('mysql_ecommerce')->create('in_cars', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('product_id')->unsigned();

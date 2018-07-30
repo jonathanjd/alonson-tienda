@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         $user = new UserEcommerce();
         $user->name = 'dev';
         $user->email = 'headjd@gmail.com';
-        $user->password = bcrypt('123456789');
+        $user->password = bcrypt('123456');
         $user->type = 'dev';
         $user->save();
 
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
         $user = new UserEcommerce();
         $user->name = 'admin';
         $user->email = 'user@admin.com';
-        $user->password = bcrypt('123456789');
+        $user->password = bcrypt('123456');
         $user->type = 'admin';
         $user->save();
     }

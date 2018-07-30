@@ -33,4 +33,10 @@ class UserEcommerce extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function orders()
+    {
+        # code...
+        return $this->hasMany(Order::class);
+    }
 }

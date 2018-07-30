@@ -9,7 +9,7 @@ class Car extends Model
     //
     protected $connection = 'mysql_ecommerce';
 
-    protected $fillable = ['status'];
+    protected $fillable = ['status', 'customid'];
 
     public function inCars()
     {
@@ -23,6 +23,12 @@ class Car extends Model
         return $this->belongsToMany(Product::class, 'in_cars');
     }
 
+    public function order()
+    {
+        # code...
+        return $this->hasOne(Order::class);
+    }
+
     public function productSize()
     {
         # code...
@@ -33,6 +39,26 @@ class Car extends Model
     {
         # code...
         return $this->products()->sum('pricing');
+    }
+
+    public function approve()
+    {
+        # code...
+        $this->updateCustomIDAndStatus();
+    }
+
+    public function gererateCustomId()
+    {
+        # code...
+        return md5("$this->id $this->updated_at");
+    }
+
+    public function updateCustomIDAndStatus()
+    {
+        # code...
+        $this->status = "approved";
+        $this->customid = $this->gererateCustomId();
+        $this->save();
     }
 
     public static function findOrCreateBySessionID($car_id)
