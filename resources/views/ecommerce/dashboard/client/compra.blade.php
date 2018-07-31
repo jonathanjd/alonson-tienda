@@ -65,7 +65,7 @@
                 <p><strong>Fecha: </strong>{{ date("d/m/Y", strtotime($order->created_at)) }}</p>
                 <p><strong>Status: </strong>{{ strtoupper($order->status) }}</p>
                 <p><strong>Total: </strong>${{ $order->total }}.00</p>
-                <a href="#" class="button is-info">Generar PDF</a>
+                <a href="{{ route('generate.pdf', $order->car->customid) }}" class="button is-info">Generar PDF</a>
             </div>
         </div>
     </div>

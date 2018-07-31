@@ -32,7 +32,7 @@
                             <td>{{ strtoupper($order->status) }}</td>
                             <td>${{ $order->total }}</td>
                             <td>
-                                <a href="{{ route('compra', $order->car->customid) }}" class="button is-primary">Ver Recibo</a>
+                                <a href="{{ route('compra', $order->car->customid) }}" class="button is-primary">Ver Factura</a>
                             </td>
                         </tr>
                     @endforeach

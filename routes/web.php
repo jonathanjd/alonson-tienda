@@ -36,4 +36,5 @@ Route::group(['prefix' => 'tienda'], function () {
     Route::get('dashboard', 'Ecommerce\DashBoardController@index')->name('dashboard');
     Route::get('dashboard/mis-compras', 'Ecommerce\DashBoardController@misCompras')->name('mis.compras');
     Route::get('dashboard/compra/{compras}', 'Ecommerce\DashBoardController@compra')->name('compra');
+    Route::get('dashboard/generate/pdf/{customid}', 'Ecommerce\PDFController@show')->name('generate.pdf');
 });
