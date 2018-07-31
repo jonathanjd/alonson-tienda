@@ -55,7 +55,35 @@
           </tbody>
         </table>
         <p class="subtitle"><strong>SubTotal: ${{ $total }}</strong></p>
-        <a href="{{ route('payment.send') }}" class="button is-large is-info is-fullwidth"><i class="fab fa-cc-paypal fa-2x"></i></a>
+        @if (Auth::guard('user-ecommerce')->check())
+            <a href="{{ route('payment.send') }}" class="button is-large is-info is-fullwidth"><i class="fab fa-cc-paypal fa-2x"></i></a>
+            @else
+
+            <div class="columns is-multiline">
+                <div class="column">
+                    <a href="{{ route('login') }}">
+                        <div class="card">
+                            <div class="card-content">
+                                <p><i class="fas fa-sign-in-alt"></i></p>
+                                <h5>Login</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="{{ route('register') }}">
+                        <div class="card">
+                            <div class="card-content">
+                                <p><i class="far fa-user"></i></p>
+                                <h5>Registrarse</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="button is-large is-info is-fullwidth" disabled><i class="fab fa-cc-paypal fa-2x"></i></a>
+        @endif
       </div>
     </div>
   </div>
